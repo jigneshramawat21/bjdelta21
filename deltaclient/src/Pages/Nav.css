@@ -1,0 +1,122 @@
+body{
+    background-color:#121212; 
+}
+.main{
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 2px;
+    position: fixed;
+    z-index: 1111;
+    background-color: #121212;
+}
+.logoimg img:hover{
+    cursor: pointer;
+    opacity: 3;
+    transition: opacity 0.3s ease-in-out;
+    border: solid 0.5px #1b05be;
+}
+.logotitle{
+    font: italic small-caps bold 16px/2 cursive;
+    font-size: 3rem;
+    font-weight:bold;
+    letter-spacing: -2.1px;
+    color: #01FFCC;
+    text-shadow: 0 0 20px #01FFCC, 0 0 10px #01FFCC;
+    text-decoration: none;
+    cursor: pointer;
+}
+.ullist ul a{
+    font-weight: 800;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    padding-top: 5px;
+    list-style: none;
+    text-decoration: none;
+    color: #01FFCC;
+}
+.ullist ul a:hover{
+    color: #05fb95;
+    transition: color 0.3s ease-in-out;
+    transform: scale(1.1);
+}
+
+/* Hamburger icon styles */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    right: 5px;
+  }
+  .hamburger .bar {
+    height: 3px;
+    width: 25px;
+    background-color: #01FFCC;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+  .ham{
+    position: relative;
+  }
+ 
+  .togelmain  a{
+    display: block;
+    padding-top: 40px;
+    font-size: 1.5rem;
+    color: #01FFCC;
+    padding-bottom:40px ;
+    box-shadow: 0 4px 10px #01FFCC;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .togelmain{
+    position: relative;
+    top: 0px;
+    position: absolute;
+    height: 100vh;
+    z-index: 1000;
+    width: 100%;
+    right: 0;
+    box-shadow: 0 4px 10px #01FFCC;
+    backdrop-filter: blur(7px);         
+    -webkit-backdrop-filter: blur(10px); 
+    background-color:#121212;  
+    border-radius: 10px;
+    color: black;
+   
+    overflow-y: scroll;
+
+  }
+  .toglecontact{
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    color: #01FFCC;
+  }
+  .toglecontact h2{
+    padding-top: 20px;
+  }
+
+  @media (max-width: 768px) {
+ .ullist ul li{
+    display: none;
+  }
+  .logoimg img{
+    display: none;
+  }
+ }
+  
+ @media (max-width: 375px) {
+    .ulham li{
+        font-size: 1rem;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    }
+     
+   

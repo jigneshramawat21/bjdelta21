@@ -1,0 +1,70 @@
+.mainAbout{
+    padding-top: 90px;
+    margin: 0;
+    box-sizing: border-box;
+    color: #01ffcc;
+  background-color:#1A1A1A;
+  box-shadow: inset 0 0 20px 1px #01FFCC;
+}
+.mainsectiontwo{
+    height: auto;
+    width: 100%;
+}
+.imgboxabout {
+    position: relative;
+    width: 100%;
+    height: 500px; /* adjust as needed */
+    overflow: hidden;
+  }
+  
+  .imgboxabout img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%); /* makes image darker so white text is readable */
+  }
+  
+  .overlayText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 2;
+    padding: 0 20px;
+  }
+  
+  .overlayText h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    
+  }
+.getintouch{
+  color: #01ffcc;
+  background-color:#1A1A1A;
+
+  box-shadow: inset 0 0 20px 1px #01FFCC;
+}
+  .overlayText p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+  .servicebutton button {
+    padding: 14px 40px;
+    background-color: #87e8f5dc;
+    color: white;
+    border: none;
+    border-radius: 35px;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.178);
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.4s ease-in-out;
+  }
+  
+  .servicebutton button:hover {
+    background-color: #a8e2f5;
+    color: white;
+    transform: scale(1.03);
+  }
+  
