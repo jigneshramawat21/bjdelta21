@@ -38,13 +38,13 @@ function HomeManage() {
   }, []);
 
   const fetchHomeData = () => {
-    axios.get("http://localhost:5000/api/home").then((res) => {
+    axios.get("https://bjdelta21.vercel.app/api/home").then((res) => {
       setAllHomes(res.data);
     });
   };
 
   const fetchServices = () => {
-    axios.get("http://localhost:5000/api/services").then((res) => {
+    axios.get("https://bjdelta21.vercel.app/api/services").then((res) => {
       setServices(res.data);
     });
   };
@@ -73,13 +73,13 @@ function HomeManage() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (form._id) {
-      axios.put(`http://localhost:5000/api/home/${form._id}`, form).then(() => {
+      axios.put(`https://bjdelta21.vercel.app/api/home/${form._id}`, form).then(() => {
         alert("Home Updated");
         setForm(defaultHomeForm);
         fetchHomeData();
       });
     } else {
-      axios.post("http://localhost:5000/api/home", form).then(() => {
+      axios.post("https://bjdelta21.vercel.app/api/home", form).then(() => {
         alert("Home Created");
         setForm(defaultHomeForm);
         fetchHomeData();
@@ -109,7 +109,7 @@ function HomeManage() {
 
   const handleDelete = (id) => {
     if (window.confirm("Delete this home entry?")) {
-      axios.delete(`http://localhost:5000/api/home/${id}`).then(() => {
+      axios.delete(`https://bjdelta21.vercel.app/api/home/${id}`).then(() => {
         fetchHomeData();
       });
     }
@@ -129,14 +129,14 @@ function HomeManage() {
     e.preventDefault();
     if (serviceForm._id) {
       axios
-        .put(`http://localhost:5000/api/services/${serviceForm._id}`, serviceForm)
+        .put(`https://bjdelta21.vercel.app/api/services/${serviceForm._id}`, serviceForm)
         .then(() => {
           alert("Service Updated");
           setServiceForm(defaultServiceForm);
           fetchServices();
         });
     } else {
-      axios.post("http://localhost:5000/api/services", serviceForm).then(() => {
+      axios.post("https://bjdelta21.vercel.app/api/services", serviceForm).then(() => {
         alert("Service Created");
         setServiceForm(defaultServiceForm);
         fetchServices();
@@ -150,7 +150,7 @@ function HomeManage() {
 
   const handleServiceDelete = (id) => {
     if (window.confirm("Delete this service?")) {
-      axios.delete(`http://localhost:5000/api/services/${id}`).then(() => {
+      axios.delete(`https://bjdelta21.vercel.app/api/services/${id}`).then(() => {
         fetchServices();
       });
     }
