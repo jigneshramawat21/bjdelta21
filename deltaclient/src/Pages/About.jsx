@@ -54,7 +54,7 @@ function About() {
 
   const fetchAboutData = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/about");
+      const response = await axios.get("https://bjdelta21.vercel.app/api/about");
       setAboutData(response.data[0]);
     } catch (error) {
       console.error("Error fetching about data:", error);
@@ -63,7 +63,7 @@ function About() {
 
   const fetchFooterData = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/home");
+      const response = await axios.get("https://bjdelta21.vercel.app/api/home");
       setFooterData(response.data[0]?.footer);
     } catch (error) {
       console.error("Error fetching footer data:", error);
