@@ -91,7 +91,7 @@ const PhoneScrollView = () => {
 
   const fetchHomeData = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/home");
+      const response = await axios.get("https://bjdelta21.vercel.app/api/home");
       setHomeData(response.data[0]);
     } catch (error) {
       console.error("Error fetching home data:", error);
