@@ -5,7 +5,7 @@ function ContactManage() {
   const [contacts, setContacts] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/contact")
+    axios.get("https://bjdelta21.vercel.app/api/contact")
       .then((res) => setContacts(res.data))
       .catch((err) => console.error("Fetch error:", err));
   }, []);
