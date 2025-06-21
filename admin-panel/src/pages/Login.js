@@ -7,7 +7,7 @@ function Login({ setIsAuthenticated }) {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    if (password === "33402033") {
+    if (password === "33402033delta") {
       localStorage.setItem("admin-auth", "true");
       setIsAuthenticated(true);
       navigate("/");
