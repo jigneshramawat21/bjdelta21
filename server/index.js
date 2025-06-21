@@ -29,6 +29,11 @@ app.use("/api/home", homeRoutes);
 app.use("/api/homeservices", homeServiceRoutes);
 app.use("/api/services", serviceRoutes); 
 
+app.get("/", (req, res) => {
+  res.send("✅ Backend API is running on Vercel!");
+});
+
+
 
 app.listen(5000, () => {
   console.log("Server running on http://localhost:5000");
