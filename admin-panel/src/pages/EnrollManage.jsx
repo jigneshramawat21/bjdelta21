@@ -5,7 +5,7 @@ function EnrollManage() {
   const [enrolls, setEnrolls] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/enroll")
+    axios.get("https://bjdelta21.vercel.app/api/enroll")
       .then((res) => setEnrolls(res.data))
       .catch((err) => console.error("Fetch error:", err));
   }, []);
