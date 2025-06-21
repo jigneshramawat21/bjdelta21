@@ -31,7 +31,7 @@ function AboutManage() {
   }, []);
 
   const fetchAbouts = () => {
-    axios.get("http://localhost:5000/api/about").then((res) => {
+    axios.get("https://bjdelta21.vercel.app/api/about").then((res) => {
       if (Array.isArray(res.data)) {
         setAllAbouts(res.data);
       } else {
@@ -59,13 +59,13 @@ function AboutManage() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (form._id) {
-      axios.put(`http://localhost:5000/api/about/${form._id}`, form).then(() => {
+      axios.put(`https://bjdelta21.vercel.app/api/about/${form._id}`, form).then(() => {
         alert("Updated Successfully");
         setForm(defaultForm);
         fetchAbouts();
       });
     } else {
-      axios.post("http://localhost:5000/api/about", form).then(() => {
+      axios.post("https://bjdelta21.vercel.app/api/about", form).then(() => {
         alert("Created Successfully");
         setForm(defaultForm);
         fetchAbouts();
@@ -79,7 +79,7 @@ function AboutManage() {
 
   const handleDelete = (id) => {
     if (window.confirm("Delete this entry?")) {
-      axios.delete(`http://localhost:5000/api/about/${id}`).then(() => {
+      axios.delete(`https://bjdelta21.vercel.app/api/about/${id}`).then(() => {
         fetchAbouts();
       });
     }
