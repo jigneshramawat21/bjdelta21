@@ -15,7 +15,7 @@ const ServiceManage = () => {
   // ✅ Fetch all cards
   const fetchCards = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/services");
+      const res = await axios.get("https://bjdelta21.vercel.app/api/services");
       setCards(res.data);
     } catch (err) {
       console.error("Error fetching cards:", err);
@@ -41,10 +41,10 @@ const ServiceManage = () => {
       };
 
       if (editingId) {
-        await axios.put(`http://localhost:5000/api/services/${editingId}`, payload);
+        await axios.put(`https://bjdelta21.vercel.app/api/services/${editingId}`, payload);
         setEditingId(null);
       } else {
-        await axios.post("http://localhost:5000/api/services", payload);
+        await axios.post("https://bjdelta21.vercel.app/api/services", payload);
       }
 
       setFormData({
@@ -74,7 +74,7 @@ const ServiceManage = () => {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure to delete this card?")) {
       try {
-        await axios.delete(`http://localhost:5000/api/services/${id}`);
+        await axios.delete(`https://bjdelta21.vercel.app/api/services/${id}`);
         fetchCards();
       } catch (err) {
         console.error("Error deleting card:", err);
