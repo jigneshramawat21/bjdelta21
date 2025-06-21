@@ -52,7 +52,7 @@ function Home() {
 
     const fetchHomeData = async () => {
         try {
-            const response = await axios.get("http://localhost:5000/api/home");
+            const response = await axios.get("https://bjdelta21.vercel.app/api/home");
             setHomeData(response.data[0]);
         } catch (error) {
             console.error("Error fetching home data:", error);
@@ -61,7 +61,7 @@ function Home() {
 
     const fetchServiceData = async () => {
         try {
-            const response = await axios.get("http://localhost:5000/api/homeservices");
+            const response = await axios.get("https://bjdelta21.vercel.app/api/homeservices");
             setServices(response.data);
         } catch (error) {
             console.error("Error fetching service data:", error);
