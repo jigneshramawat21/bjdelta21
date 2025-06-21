@@ -21,7 +21,7 @@ function Enroll() {
        }, []);
        const fetchHomeData = async () => {
         try {
-            const response = await axios.get("http://localhost:5000/api/home");
+            const response = await axios.get("https://bjdelta21.vercel.app/api/home");
             setHomeData(response.data[0]);
         } catch (error) {
             console.error("Error fetching home data:", error);
@@ -41,7 +41,7 @@ function Enroll() {
     if (!validate()) return;
 
     try {
-      const response = await axios.post("http://localhost:5000/api/enroll", formData);  // 👈 Adjust URL if needed
+      const response = await axios.post("https://bjdelta21.vercel.app/api/enroll", formData);  // 👈 Adjust URL if needed
       console.log("Response:", response.data);
       setStatusMsg("✅ Successfully submitted!");
       setFormData({ name: '', gender: '', contact: '', email: '' });
