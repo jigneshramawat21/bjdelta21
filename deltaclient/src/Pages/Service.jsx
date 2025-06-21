@@ -101,7 +101,7 @@ function Service() {
 
   const fetchCards = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/services");
+      const res = await axios.get("https://bjdelta21.vercel.app/api/services");
       setCards(res.data);
     } catch (err) {
       console.error("Error fetching cards:", err);
@@ -110,7 +110,7 @@ function Service() {
 
   const fetchFooterData = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/home");
+      const response = await axios.get("https://bjdelta21.vercel.app/api/home");
       setFooterData(response.data[0]?.footer);
     } catch (error) {
       console.error("Error fetching footer data:", error);
